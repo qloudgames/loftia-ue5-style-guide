@@ -1,23 +1,29 @@
 # Loftia Unreal Engine 5 Style Guide
 Sourced from: [Gamemakin](https://gamemak.in) UE4 Style Guide()
 
+# Overview
+
+This document serves as a comprehensive guide for all project in-editor standardization and styling. It is not meant to handle C++ code, though some bits are still relevant.
+We are using a Linter in the editor to ensure that these standards are easy to follow, you can right click on a folder and choose 'linter' to confirm everything in that folder meets the linting rules. 
+
+The two most important bits are Naming Conventions and Directory Structure. Naming conventions are listed in a table below and easily handled by the Linter. We will have to be more diligent about enforcing good folder structure conventions.
+
+At a high level, our project is structured as follows:
+
+Content (Top Level Directory for in-editor items)
+  -Loftia (Contains all elements of the GAME)
+    -Art (Meshes, game textures, animations, etc)
+    -EditorTools (Extensions to Unreal that are project specific)
+    -Characters (Individual NPCs and their dialogues)
+    -Maps (All of our levels)
+    -UI (Menus, settings, etc. Haven't decided yet if things like crafting windows or NPC shops should exist alongside the corresponding blueprints, or in the UI folder)
+    -World (All gameplay blueprints - Farming, crafting stations, items, etc. In their own folders, of course)
+  -Marketing (Anything NOT meant to be in the game itself. Sequences, custom blueprints/models for marketing, etc. The game should function exactly as normal if this folder is deleted)
+  -Developers (Local test folders for developers, with items that are in-progress and not meant to be use in production, but still committed to source control. Things like TestScenes should live here)
+
+
+
 ## Table of contents
-- [Important Terminology](#important-terminology)
-  - [Levels/Maps](#terms-level-map)
-  - [Identifiers](#terms-identifiers)
-  - [Cases](#terms-cases)
-  - [Variables / Properties](#terms-var-prop)
-    - [Property](#terms-property)
-    - [Variable](#terms-variable)
-- [0. Principles](#0)
-  - [0.1 If your UE5 project already has a style guide, you should follow it](#0.1)
-  - [0.2 All structure, assets, and code in any Unreal Engine 4 project should look like a single person created it, no matter how many people contributed](#0.2)
-  - [0.3 Friends do not let friends have bad style](#0.3)
-  - [0.4 A team without a style guide is no team of mine](#0.4)
-  - [0.5 Don't Break The Law](#0.5)
-- [00. Globally Enforced Opinions](#00)
-  - [00.1 Forbidden Characters](#00.1)
-    - [Identifiers](#identifiers)
 - [1. Asset Naming Conventions](#anc)
   - [1.1 Base Asset Name - `Prefix_BaseAssetName_Variant_Suffix`](#base-asset-name)
     - [1.1 Examples](#1.1-examples)
@@ -468,7 +474,7 @@ Using other characters outside `a-z`, `A-Z`, and `0-9` such as `@`, `-`, `_`, `,
 <a name="structure-top-level"><a>
 ### 2.2 Use A Top Level Folder For Project Specific Assets
 
-All of a project's assets should exist in a folder named after the project. For example, if your project is named 'Generic Shooter', _all_ of it's content should exist in `Content/GenericShooter`.
+Content should exist in `Content/Loftia`.
 
 > The `Developers` folder is not for assets that your project relies on and therefore is not project specific. See [Developer Folders](#2.3) for details about this.
 
@@ -587,7 +593,7 @@ For example, animations that are shared across multiple characters should lay in
 <a name="structure-material-library"></a>
 ### 2.8 `MaterialLibrary`
 
-If your project makes use of master materials, layered materials, or any form of reusable materials or textures that do not belong to any subset of assets, these assets should be located in `Content/Project/MaterialLibrary`.
+If your project makes use of master materials, layered materials, or any form of reusable materials or textures that do not belong to any subset of assets, these assets should be located in `Content/Project/Art/MaterialLibrary`.
 
 This way all 'global' materials have a place to live and are easily located.
 
