@@ -10,16 +10,16 @@ The two most important bits are Naming Conventions and Directory Structure. Nami
 
 At a high level, our project is structured as follows:
 
-Content (Top Level Directory for in-editor items)
-  -Loftia (Contains all elements of the GAME)
-    -Art (Meshes, game textures, animations, etc)
-    -EditorTools (Extensions to Unreal that are project specific)
-    -Characters (Individual NPCs and their dialogues)
-    -Maps (All of our levels)
-    -UI (Menus, settings, etc. Haven't decided yet if things like crafting windows or NPC shops should exist alongside the corresponding blueprints, or in the UI folder)
-    -World (All gameplay blueprints - Farming, crafting stations, items, etc. In their own folders, of course)
-  -Marketing (Anything NOT meant to be in the game itself. Sequences, custom blueprints/models for marketing, etc. The game should function exactly as normal if this folder is deleted)
-  -Developers (Local test folders for developers, with items that are in-progress and not meant to be use in production, but still committed to source control. Things like TestScenes should live here)
+Content (Top Level Directory for in-editor items) <br>
+  &emsp;-Loftia (Contains all elements of the GAME) <br>
+ &emsp;   &emsp;-Art (Meshes, game textures, animations, etc) <br>
+ &emsp;  &emsp; -EditorTools (Extensions to Unreal that are project specific) <br>
+  &emsp;&emsp;  -Characters (Individual NPCs and their dialogues) <br>
+   &emsp;&emsp; -Maps (All of our levels) <br>
+   &emsp;&emsp; -UI (Menus, settings, etc. Haven't decided yet if things like crafting windows or NPC shops should exist alongside the corresponding blueprints, or in the UI folder) <br>
+  &emsp;&emsp;  -World (All gameplay blueprints - Farming, crafting stations, items, etc. In their own folders, of course) <br>
+ &emsp; -Marketing (Anything NOT meant to be in the game itself. Sequences, custom blueprints/models for marketing, etc. The game should function exactly as normal if this folder is deleted) <br>
+&emsp;  -Developers (Local test folders for developers, with items that are in-progress and not meant to be use in production, but still committed to source control. Things like TestScenes should live here) <br>
 
 
 
