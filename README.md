@@ -197,7 +197,7 @@ When naming an asset, use these tables to determine the prefix and suffix to use
 | Level (Gameplay)        |            | _Gameplay  |                                  |
 | Blueprint               | BP_        |            |                                  |
 | Material                | M_         |            |                                  |
-| Static Mesh             | S_         |            | Many use SM_. We use S_.         |
+| Static Mesh             | SM         |            |          |
 | Skeletal Mesh           | SK_        |            |                                  |
 | Texture                 | T_         | _?         | See [Textures](#anc-textures)    |
 | Particle System         | PS_        |            |                                  |
@@ -281,8 +281,8 @@ When naming an asset, use these tables to determine the prefix and suffix to use
 | Texture (Normal)        | T_         | _N         |                                  |
 | Texture (Roughness)     | T_         | _R         |                                  |
 | Texture (Alpha/Opacity) | T_         | _A         |                                  |
-| Texture (Ambient Occlusion) | T_     | _O         |                                  |
-| Texture (Bump)          | T_         | _B         |                                  |
+| Texture (Ambient Occlusion) | T_     | _AO         |                                  |
+| Texture (Bump/Height)   | T_         | _H         |                                  |
 | Texture (Emissive)      | T_         | _E         |                                  |
 | Texture (Mask)          | T_         | _M         |                                  |
 | Texture (Specular)      | T_         | _S         |                                  |
